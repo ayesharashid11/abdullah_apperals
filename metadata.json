@@ -1,0 +1,7 @@
+{
+  "name": "STITCH_WORKS - Request a Quote",
+  "description": "Industrial-grade apparel manufacturing Request a Quote (RFQ) system with full-stack Node.js, Express, Multer file validation, and Nodemailer email delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

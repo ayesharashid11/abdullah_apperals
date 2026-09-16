@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #fbf9f5;
+    color: #1b1c1a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+
+  code, kbd, samp, pre, .font-mono, .label-caps, .data-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom design system utility classes matching Google Stitch spec */
+.border-structural {
+  border: 1px solid #c3c6ce;
+}
+
+.input-base {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #c3c6ce;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #1b1c1a;
+  border-radius: 2px;
+  transition: all 0.15s ease-in-out;
+}
+
+.input-base:focus {
+  outline: none;
+  border-color: #1d3956;
+  box-shadow: 0 0 0 1px #1d3956;
+}
+
+.input-base::placeholder {
+  color: #73777e;
+}
+
+.label-base {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #43474d;
+}
+
+/* Filmstrip Infinite Animation */
+@keyframes filmstrip-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes filmstrip-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-filmstrip-left {
+  display: flex;
+  width: max-content;
+  animation: filmstrip-left 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-filmstrip-right {
+  display: flex;
+  width: max-content;
+  animation: filmstrip-right 45s linear infinite;
+  will-change: transform;
+}
+
+/* Brand Marquee Infinite Smooth Animation */
+@keyframes brand-marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-brand-marquee {
+  display: flex;
+  width: max-content;
+  animation: brand-marquee-left 25s linear infinite;
+  will-change: transform;
+}
+
+.pause-hover:hover {
+  animation-play-state: paused;
+}
+

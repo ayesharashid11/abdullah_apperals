@@ -1,0 +1,133 @@
+// src/data/homeData.js
+import blackCargoImg from '../assets/images/black_cargo_pants_1787225683497.jpg';
+import navyTrouserImg from '../assets/images/navy_wide_trouser_1787225697031.jpg';
+import brownInterlockImg from '../assets/images/brown_interlock_pant_1787225710804.jpg';
+import burgundyTracksuitImg from '../assets/images/burgundy_track_suit_1787225731121.jpg';
+import roseLoungeSetImg from '../assets/images/rose_lounge_set_1787225745591.jpg';
+import creamPleatedImg from '../assets/images/cream_pleated_pant_1787225760974.jpg';
+
+export const whatWeMakeProducts = [
+  {
+    id: 1,
+    title: 'Black Cargo Pants',
+    category: 'Wovens & Bottoms',
+    gsm: '300 GSM',
+    content: '50/50 Cotton/Polyester',
+    fabric: 'Heavyweight Twill / Cargo Weave',
+    description: 'GSM 300, Content 50/50 Cotton/Polyester',
+    details: 'Featuring dual side cargo flap pockets, wide-leg relaxed silhouette, deep front pockets, and reinforced stress points.',
+    image: blackCargoImg,
+  },
+  {
+    id: 2,
+    title: 'Navy Fluid Trousers',
+    category: 'Tailored Bottoms',
+    gsm: '260 GSM',
+    content: '65/35 Viscose/Polyester',
+    fabric: 'Fluid Drape Woven Blend',
+    description: '65/35 Viscose/Polyester',
+    details: 'High-waisted tailored wide leg with clean front fly, soft fluid drape, wrinkle-resistant finish, and slash pockets.',
+    image: navyTrouserImg,
+  },
+  {
+    id: 3,
+    title: 'Brown Flare Trousers',
+    category: 'Interlock Knitwear',
+    gsm: '320 GSM',
+    content: 'Cotton/Polyester Interlock',
+    fabric: 'Interlock Fabric',
+    description: 'Interlock Fabric',
+    details: 'Structured double-knit interlock fabric with stitched pintuck front crease, tailored waistband, and flare hemline.',
+    image: brownInterlockImg,
+  },
+  {
+    id: 4,
+    title: 'Track Suit Joggers',
+    category: 'Fleece & Activewear',
+    gsm: '280 GSM',
+    content: '70/30 Cotton/Poly',
+    fabric: 'Fleece 3 Thread',
+    description: 'Track suit, fleece 3 thread, content 70/30 cotton/poly, GSM 280',
+    details: '3-thread brushed fleece interior, contrast side panel racing stripes, elasticated waistband with drawcords, and ribbed cuffs.',
+    image: burgundyTracksuitImg,
+  },
+  {
+    id: 5,
+    title: 'Lounge Matching Set',
+    category: 'Casual Sets',
+    gsm: '220 GSM',
+    content: '40/60 Viscose/Polyester',
+    fabric: 'Interlock Knit',
+    description: 'GSM 220, Fabric Interlock, Content viscose/polyester 40/60',
+    details: 'Two-piece matching set with oversized drop-shoulder chest pocket tee and relaxed cargo lounge trousers in premium 220 GSM interlock.',
+    image: roseLoungeSetImg,
+  },
+  {
+    id: 6,
+    title: 'Pleated Wide Trousers',
+    category: 'Tailored Bottoms',
+    gsm: '270 GSM',
+    content: '65/35 Viscose/Polyester',
+    fabric: 'Structured Drape Suiting',
+    description: '65/35 Viscose/Polyester',
+    details: 'High-waisted wide leg silhouette with double front pleats, waistband button tabs, deep inseam, and tailored drape.',
+    image: creamPleatedImg,
+  },
+];
+
+export const manufacturedCategories = [
+  {
+    id: 'hoodies',
+    name: 'Hoodies',
+    tag: 'Knitwear & Fleece',
+    gsm: '380 - 450 GSM',
+    fabric: '100% Combed Cotton / 80/20 Cotton-Poly Fleece & French Terry',
+    desc: 'Heavyweight oversized and fitted hoodies with double-lined hoods, ribbed cuffs, kangaroo pockets, and custom drawcords.',
+    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 't-shirts',
+    name: 'T-shirts',
+    tag: 'Single Jersey',
+    gsm: '180 - 280 GSM',
+    fabric: '100% Organic Ring-Spun Combed Cotton / Slub Jersey',
+    desc: 'Precision cut-and-sew crewnecks, drop-shoulder oversized tees, and vintage garment-dyed wash tees with reinforced collars.',
+    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'polo-shirts',
+    name: 'Polo shirts',
+    tag: 'Pique & Interlock',
+    gsm: '220 - 260 GSM',
+    fabric: '100% Mercerized Cotton Pique / Cotton-Poly Blend',
+    desc: 'Classic and modern fit polo shirts featuring jacquard knit collars, reinforced plackets, and engraved custom buttons.',
+    image: 'https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'track-suits',
+    name: 'Track suits',
+    tag: 'Activewear & Sets',
+    gsm: '280 - 340 GSM',
+    fabric: '3-Thread Fleece / Double-Knit Polyester-Cotton Interlock',
+    desc: 'Full-zip and pullover matching track jackets and pants with custom side panel piping, zippered pockets, and elasticated trims.',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'sweatshirts',
+    name: 'Sweatshirts',
+    tag: 'Loopback Terry',
+    gsm: '320 - 400 GSM',
+    fabric: 'Heavyweight Loopback French Terry / Brushed Cotton Fleece',
+    desc: 'Classic crewneck sweatshirts with cross-grain body panels, flatlock stitching, V-insert collar gussets, and durable rib trims.',
+    image: 'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'joggers',
+    name: 'Joggers',
+    tag: 'Bottoms & Fleece',
+    gsm: '300 - 380 GSM',
+    fabric: 'Heavyweight Brushed Fleece / Interlock Twill Knit',
+    desc: 'Tapered and relaxed cargo jogger pants with deep welt pockets, hidden zippered compartments, and heavy-duty ribbed cuffs.',
+    image: 'https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=800&q=80',
+  },
+];
