@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 
 async function bootstrap() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT || 5000;
 
   // Initialize MongoDB Connection (non-blocking)
   await connectDB().catch((err) => {
@@ -27,21 +27,22 @@ async function bootstrap() {
   // 1. Security Headers via Helmet
   app.use(
     helmet({
-      contentSecurityPolicy: false, // Disabled for flexible embedding & Vite dev script execution
+      contentSecurityPolicy: false,
       crossOriginEmbedderPolicy: false
     })
   );
 
   // 2. CORS configuration
+  const defaultOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:3000'];
   const allowedOrigins = process.env.FRONTEND_URL
-    ? [process.env.FRONTEND_URL]
-    : true; // Allow same-origin or preview iframe requests
+    ? [process.env.FRONTEND_URL, ...defaultOrigins]
+    : true;
 
   app.use(
     cors({
       origin: allowedOrigins,
       credentials: true,
-      methods: ['GET', 'POST', 'OPTIONS']
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
     })
   );
 
@@ -74,15 +75,16 @@ async function bootstrap() {
     });
   });
 
-  // 6. Vite / Static Frontend Middleware
-  if (process.env.NODE_ENV !== 'production') {
-    const { createServer: createViteServer } = await import('vite');
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: 'spa'
+  // Root endpoint for API server
+  app.get('/', (req, res) => {
+    res.json({
+      message: 'Abdullah Apparels Backend API is running',
+      health: '/api/health'
     });
-    app.use(vite.middlewares);
-  } else {
+  });
+
+  // 6. Static Frontend Handling for Production
+  if (process.env.NODE_ENV === 'production') {
     const distPath = path.join(__dirname, 'dist');
     app.use(express.static(distPath));
     app.get('*', (req, res) => {
@@ -94,7 +96,7 @@ async function bootstrap() {
   app.use(errorHandler);
 
   app.listen(PORT, () => {
-    console.log(`🚀 Abdullah Apparels Server running on http://localhost:${PORT}`);
+    console.log(`🚀 Abdullah Apparels Express Backend running on http://localhost:${PORT}`);
   });
 }
 

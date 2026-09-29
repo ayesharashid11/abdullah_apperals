@@ -90,7 +90,7 @@ export default function Footer({ onNavigate }) {
             <div className="pt-2 flex items-center gap-2.5">
               <a
                 id="footer-facebook-link"
-                href="https://facebook.com"
+                href="https://www.facebook.com/Abdullah.apparels.manufacturer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -101,7 +101,7 @@ export default function Footer({ onNavigate }) {
               </a>
               <a
                 id="footer-instagram-link"
-                href="https://instagram.com"
+                href="https://www.instagram.com/abdullahapparels/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -112,7 +112,7 @@ export default function Footer({ onNavigate }) {
               </a>
               <a
                 id="footer-linkedin-link"
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/abdullah-amin-circular-knit-apparels-network-01641590/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
